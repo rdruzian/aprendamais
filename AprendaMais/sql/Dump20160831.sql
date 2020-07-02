@@ -87,7 +87,7 @@ CREATE TABLE avaliacao (
   nota int DEFAULT '0',
   id_aluno int NOT NULL,
   id_avaliacao int NOT NULL IDENTITY,
-  dia date DEFAULT NULL,
+  dia date DEFAULT NOT NULL,
   PRIMARY KEY (id_avaliacao)
 ) ;
 /*!40101 SET character_set_client = @saved_cs_client */;

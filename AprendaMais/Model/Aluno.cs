@@ -11,23 +11,23 @@ namespace AprendaMais.Models
     {
         Biologica=1,
         Exatas=2,
-        Humanas=1
+        Humanas=3
     }
 
     public class Aluno
     {
         [Required]
-        [Column(TypeName="varchar(30)")]
+        [StringLength(maximumLength: 30)]
         public string nome { get; set; }
         [Required]
-        [Column("nascimento")]
+        public char sexo { get; set; }
+        [Required]
         public DateTime DataNascimento{ get; set; }
         [Required]
-        [Column(TypeName ="int")]
         public Area area { get; set; }
-        
-        [Column(TypeName = "varchar(30)")]
+        [StringLength(maximumLength:30)]
         public string Escola { get; set; }
+        [Required]
         public int ID_aluno{ get; set; }
     }
 }
