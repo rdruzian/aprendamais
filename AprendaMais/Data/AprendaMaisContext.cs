@@ -70,6 +70,49 @@ namespace AprendaMais.Data
                 IsRequired();
             modelBuilder.Entity<Avaliacao>().
                 HasKey(a => a.ID_avaliacao);
+
+            //Alternativa Prova
+            modelBuilder.Entity<AlternativaProva>().
+                ToTable("alternativaprova");
+            modelBuilder.Entity<AlternativaProva>().
+                Property(a => a.ID_AlternativaProva).
+                    HasColumnName("id_alternativaprova").
+                IsRequired();
+            modelBuilder.Entity<AlternativaProva>().
+                Property(a => a.ID_pergunta).
+                    HasColumnName("id_pergunta").
+                IsRequired();
+            modelBuilder.Entity<AlternativaProva>().
+                Property(a => a.Resp_correto).
+                    HasColumnName("resp_certa").
+                    HasColumnType("varchar(1)").
+                IsRequired();
+            modelBuilder.Entity<AlternativaProva>().
+                Property(a => a.Texto).
+                    HasColumnName("texto").
+                    HasColumnType("varchar(max)").
+                IsRequired();
+            modelBuilder.Entity<AlternativaProva>().
+                Property(a => a.A).
+                    HasColumnType("varchar(max)").
+                IsRequired();
+            modelBuilder.Entity<AlternativaProva>().
+                Property(a => a.B).
+                    HasColumnType("varchar(max)").
+                IsRequired();
+            modelBuilder.Entity<AlternativaProva>().
+                Property(a => a.C).
+                    HasColumnType("varchar(max)").
+                IsRequired();
+            modelBuilder.Entity<AlternativaProva>().
+                Property(a => a.D).
+                    HasColumnType("varchar(max)").
+                IsRequired();
+            modelBuilder.Entity<AlternativaProva>().
+                Property(a => a.E).
+                    HasColumnType("varchar(max)");
+            modelBuilder.Entity<AlternativaProva>().
+                HasKey(a => a.ID_AlternativaProva);
         }
     }
 }
