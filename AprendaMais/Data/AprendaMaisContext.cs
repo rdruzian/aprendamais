@@ -113,6 +113,26 @@ namespace AprendaMais.Data
                     HasColumnType("varchar(max)");
             modelBuilder.Entity<AlternativaProva>().
                 HasKey(a => a.ID_AlternativaProva);
+
+            //Avalicao
+            modelBuilder.Entity<Avaliacao>().
+                ToTable("avaliacao");
+            modelBuilder.Entity<Avaliacao>().
+                Property(a => a.ID_aluno).
+                    HasColumnName("id_aluno").
+                IsRequired();
+            modelBuilder.Entity<Avaliacao>().
+                Property(a => a.ID_avaliacao).
+                    HasColumnName("id_avaliacao").
+                IsRequired();
+            modelBuilder.Entity<Avaliacao>().
+                Property(a => a.data).
+                    HasColumnName("dia").
+                    HasColumnType("date").
+                IsRequired();
+            modelBuilder.Entity<Avaliacao>().
+                HasKey(a => a.ID_avaliacao);
+
         }
     }
 }
