@@ -16,5 +16,6 @@ namespace AprendaMais.Models
         public int ID_disciplina { get; set; }
         [Required]
         public int ID_pergunta { get; set; }
+        public byte[] Figura { get; set; }
     }
 }

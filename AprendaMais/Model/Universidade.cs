@@ -12,7 +12,10 @@ namespace AprendaMais.Models
         [Required]
         public int ID_universidade { get; set; }
         [Required]
-        [Column(TypeName="varchar(20)")]
+        [StringLength(maximumLength:30)]
         public string nome { get; set; }
+        [Required]
+        [StringLength(maximumLength:2)]
+        public string Estado { get; set; }
     }
 }
