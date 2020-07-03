@@ -9,9 +9,5 @@ namespace AprendaMais.Models
 {
     public class De
     {
-        [Required]
-        public int ID_universidade { get; set; }
-        [Required]
-        public int ID_avaliacao { get; set; }
     }
 }

@@ -9,11 +9,5 @@ namespace AprendaMais.Models
 {
     public class PerguntaProva
     {
-        [Required]
-        public int ID_prova { get; set; }
-        [Required]
-        public int ID_pergunta { get; set; }
-        [Required]
-        public int ID_perguntaProva { get; set; }
     }
 }

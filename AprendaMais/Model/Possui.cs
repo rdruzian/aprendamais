@@ -9,9 +9,5 @@ namespace AprendaMais.Models
 {
     public class Possui
     {
-        [Required]
-        public int ID_perguntaProva { get; set; }
-        [Required]
-        public int ID_pergunta { get; set; }
     }
 }

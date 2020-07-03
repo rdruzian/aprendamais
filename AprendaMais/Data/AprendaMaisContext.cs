@@ -10,7 +10,24 @@ namespace AprendaMais.Data
 {
     public class AprendaMaisContext : DbContext
     {
+        //Tabelas
         public DbSet<Aluno> Alunos { get; set; }
+        public DbSet<AlternativaProva> AlternativaProvas { get; set; }
+        public DbSet<Avaliacao> Avaliacoes { get; set; }
+        public DbSet<Disciplina> Disciplinas { get; set; }
+        public DbSet<Pergunta> Perguntas { get; set; }
+        public DbSet<Texto> Textos { get; set; }
+        public DbSet<Universidade> Universidades { get; set; }
+
+        //Tabelas de ligações
+        public DbSet<Contem> Contems { get; set; }
+        public DbSet<De> Des { get; set; }
+        public DbSet<Ede> Edes { get; set; }
+        public DbSet<Faz> Fazs { get; set; }
+        public DbSet<PerguntaProva> PerguntaProvas { get; set; }
+        public DbSet<Pertence> Pertences { get; set; }
+        public DbSet<Possui> Possuis { get; set; }
+        public DbSet<Ser> Sers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

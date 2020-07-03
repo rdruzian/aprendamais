@@ -9,9 +9,5 @@ namespace AprendaMais.Models
 {
     public class Contem
     {
-        [Required]
-        public int ID_pergunta { get; set; }
-        [Required]
-        public int ID_avaliacao { get; set; }
     }
 }

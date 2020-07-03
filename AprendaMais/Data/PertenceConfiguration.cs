@@ -12,20 +12,12 @@ namespace AprendaMais.Data
     {
         public void Configure(EntityTypeBuilder<Pertence> builder)
         {
-            builder.
-                ToTable("pertence");
-            builder.
-                Property(p => p.ID_pergunta).
-                    HasColumnName("id_pergunta").
-                IsRequired();
-            builder.
-                Property(p => p.ID_texto).
-                    HasColumnName("id_texto").
-                IsRequired();
-            builder.
-                HasKey(p => p.ID_pergunta);
-            builder.
-                HasKey(p => p.ID_texto);
+            builder.ToTable("pertence");
+
+            builder.Property<int>("id_pergunta").IsRequired();
+            builder.Property<int>("id_texto").IsRequired();
+            
+            builder.HasKey("id_pergunta", "id_texto");
         }
     }
 }
