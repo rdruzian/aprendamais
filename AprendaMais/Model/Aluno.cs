@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AprendaMais.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -26,8 +27,16 @@ namespace AprendaMais.Models
         [Required]
         public Area area { get; set; }
         [StringLength(maximumLength:30)]
-        public string Escola { get; set; }
+        public string escola { get; set; }
+        [Required]
+        public string estado { get; set; }
         [Required]
         public int ID_aluno{ get; set; }
+        public IList<AvaliacaoAluno> Avaliacoes { get; set; }
+
+        public Aluno()
+        {
+            Avaliacoes = new List<AvaliacaoAluno>();
+        }
     }
 }
