@@ -11,7 +11,7 @@ namespace AprendaMais.Model
         [Required]
         public int ID_texto { get; set; }
         [Required]
-        public List<int> ID_pergunta { get; set; }
+        public int ID_pergunta { get; set; }
         [Required]
         public string texto { get; set; }
         [Required]

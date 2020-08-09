@@ -9,7 +9,7 @@ namespace AprendaMais.Model
     public class Dissertativa
     {
         [Required]
-        public int ID_dissertativa { get; set; }
+        [Key]
         public int ID_pergunta { get; set; }
         public string Resp_Aluno { get; set; }
         [Required]

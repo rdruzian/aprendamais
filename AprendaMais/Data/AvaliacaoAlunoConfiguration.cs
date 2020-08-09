@@ -14,10 +14,11 @@ namespace AprendaMais.Data
         {
             builder.ToTable("avaliacao_aluno");
 
+            builder.Property(aa => aa.AvaliacaoAlunoID).HasColumnName("avaliacao_alunoID").IsRequired();
             builder.Property<int>("avaliacaoID");
             builder.Property<int>("alunoID");
 
-            builder.HasKey("avaliacaoID", "alunoID");
+            builder.HasKey("avaliacao_alunoID","avaliacaoID", "alunoID");
 
             builder.HasOne(aa => aa.Avaliacao).WithMany(a => a.Alunos).HasForeignKey("avaliacaoID");
             builder.HasOne(aa => aa.Aluno).WithMany(a => a.Avaliacoes).HasForeignKey("alunoID");

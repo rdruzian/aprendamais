@@ -10,6 +10,8 @@ namespace AprendaMais.Model
     public class AvaliacaoAluno
     {
         [Required]
+        public int AvaliacaoAlunoID { get; set; }
+        [Required]
         public Avaliacao Avaliacao { get; set; }
         [Required]
         public Aluno Aluno { get; set; }
